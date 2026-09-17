@@ -242,7 +242,7 @@ export const ObservacoesForm = () => {
                                             key={`${foto}-${index}`}
                                             onClick={() =>
                                                 setFotoModal({
-                                                    url: `http://localhost:8080/arquivos/${foto.replace("ocorrencias/", "")}`,
+                                                    url: `/api/arquivos/${foto.replace("ocorrencias/", "")}`,
                                                     titulo: `Foto ${String(index + 1).padStart(2, "0")}`,
                                                 })
                                             }
@@ -256,7 +256,7 @@ export const ObservacoesForm = () => {
                                             </FotoExcluirButton>
 
                                             <FotoPreviewImagem
-                                                src={`http://localhost:8080/arquivos/${foto.replace("ocorrencias/", "")}`}
+                                                src={`/api/arquivos/${foto.replace("ocorrencias/", "")}`}
                                                 alt={`Foto salva ${index + 1}`}
                                             />
                                         </FotoPreviewCard>

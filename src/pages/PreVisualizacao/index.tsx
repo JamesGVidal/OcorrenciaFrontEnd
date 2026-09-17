@@ -184,7 +184,7 @@ export const PreVisualizacao = () => {
                           key={fotoIndex}
                           onClick={() =>
                             setFotoModal({
-                              url: `http://localhost:8080/arquivos/${foto.replace("ocorrencias/", "")}`,
+                              url: `/api/arquivos/${foto.replace("ocorrencias/", "")}`,
                               titulo: `Foto ${formatarNumero(fotoIndex + 1)}`,
                             })
                           }
@@ -193,7 +193,7 @@ export const PreVisualizacao = () => {
                             Foto {formatarNumero(fotoIndex + 1)}
                           </NumeroFoto>
                           <img
-                            src={`http://localhost:8080/arquivos/${foto.replace("ocorrencias/", "")}`}
+                            src={`/api/arquivos/${foto.replace("ocorrencias/", "")}`}
                             alt={`Registro fotografico da observacao ${numeroObservacao}`}
                           />
                         </FotoFigure>
